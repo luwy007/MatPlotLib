@@ -1,12 +1,9 @@
-'''
-Created on Oct 27, 2015
+ 
+from __future__ import print_function
 
-@author: Administrator
-'''
-#upload
-
+from pylab import *
 def SimplePlot():
-    from pylab import *
+    
     t = arange(0.0, 2.0, 0.01)
     s = sin(2*pi*t)
     plot(t, s)
@@ -26,7 +23,7 @@ def Subplot():
     import matplotlib.pyplot as plt
     
     
-    x1 = np.linspace(0.0, 5.0)
+    x1 = np.linspace(0.0, 5.0,num=100)
     x2 = np.linspace(0.0, 2.0)
     
     y1 = np.cos(2 * np.pi * x1) * np.exp(-x1)
@@ -36,6 +33,7 @@ def Subplot():
     plt.plot(x1, y1, 'yo-')
     plt.title('A tale of 2 subplots')
     plt.ylabel('Damped oscillation')
+     
     
     plt.subplot(2, 1, 2)
     plt.plot(x2, y2, 'r.-')
@@ -69,7 +67,7 @@ def Histograms():
     
     num_bins = 50
     # the histogram of the data
-    n, bins, patches = plt.hist(x, num_bins, normed=1, facecolor='green', alpha=0.5)
+    n, bins, patches = plt.hist(x, num_bins, normed=1, facecolor='green', alpha=1)
     # add a 'best fit' line
     y = mlab.normpdf(bins, mu, sigma)
     plt.plot(bins, y, 'r--')
@@ -726,7 +724,7 @@ def Mathtext():
     """
     Selected features of Matplotlib's math rendering engine.
     """
-    from __future__ import print_function
+    
     import matplotlib.pyplot as plt
     import os
     import sys
@@ -1061,8 +1059,28 @@ def Table():
 
 if __name__=="__main__":
     #test() 
+    #SimplePlot()
+    #Subplot()
+    #Histograms()
+    PathPatch()
+    #Ellipses()
+    #BarCharts()
+    #PieCharts()
+    #Scatter()
+    #Slider()
+    #Fill()
+    #Date()
+    #FinancialCharts()
+    #Basemap()
+    #Log()
+    #Polar()
+    #Legends()
+    #Mathtext()
+    #NativeTeXRendering()
+    #XKCDStyleSketch()
     pass
-
+    
+    
 
 
 
